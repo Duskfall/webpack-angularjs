@@ -1,0 +1,38 @@
+<div class="main-container">
+  <fountain-header></fountain-header>
+  <main class="main">
+    <fountain-title></fountain-title>
+    <br/>
+    <div class="container">
+      <div class="pull-right">
+
+        <select class="form-control inline-block" ng-model="vm.selectedCategory" ng-change="vm.currentPage = 1;vm.filterByCategory(vm.selectedCategory)"
+                ng-options="cat as cat.name for cat in vm.categories track by cat.id">
+          <option value="">Choose category</option>
+        </select>
+      </div>
+      <div class="pull-right">
+        <input type="text" class="form-control inline-block" ng-model="vm.search" ng-change="vm.currentPage = 1;" placeholder="Search Channels"/>
+      </div>
+
+    </div>
+    <div class="channels-container">
+      <div class="techs container">
+        <fountain-tech class="col-md-4 col-sm-6 col-xs-12 animate-repeat"
+                       ng-repeat="channel in filteredChannels = (vm.channels | filter:vm.search | filter:{ category : vm.selectedCategory.name}) | startFrom:(vm.currentPage-1)*vm.viewRecords | limitTo: vm.viewRecords track by channel.id"
+                       tech="channel"></fountain-tech>
+      </div>
+      <br/>
+      <div class="container">
+        <div class="col-md-12" ng-if="(filteredChannels.length/vm.viewRecords) > 1">
+          <div class="inline-block">displaying page</div>
+          <ul uib-pagination class="inline-block" total-items="filteredChannels.length" items-per-page="vm.viewRecords"
+              ng-model="vm.currentPage" class="pagination-sm" max-size="5" boundary-links="true"
+              num-pages="numPages" direction-links="false" first-text="<" last-text=">"></ul>
+        </div>
+      </div>
+    </div>
+  </main>
+  <fountain-footer></fountain-footer>
+</div>
+<ui-view></ui-view>

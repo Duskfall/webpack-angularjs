@@ -1,0 +1,16 @@
+<div class="tech">
+  <div class="tech-logo-container">
+    <a ui-sref="sources.edit({sourceId: $ctrl.tech.id})">
+      <img class="tech-logo" ng-src="{{ $ctrl.tech.urlsToLogos.medium }}"/>
+    </a>
+  </div>
+  <div class="tech-content">
+    <h3 class="tech-h3">
+      {{ $ctrl.tech.name }}
+    </h3>
+    <p>{{ $ctrl.tech.description }}</p>
+    <p>
+      <i class="fa fa-tag" aria-hidden="true"></i><span class="tech-category" ng-bind="::$ctrl.tech.category"></span>
+    </p>
+  </div>
+</div>
