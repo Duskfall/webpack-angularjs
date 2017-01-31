@@ -1,6 +1,7 @@
 # webpack-angularjs
 
 Project generated from https://github.com/FountainJS/generator-fountain-webapp
+
 Simple usage of https://newsapi.org to present data with AngularJS, angular UI router, Typescript, Webpack.
 
 Prerequisites for CLI:
