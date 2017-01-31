@@ -9,6 +9,8 @@ Prerequisites for CLI:
 
 To run:
 
-`git clone https://github.com/Duskfall/webpack-angularjs.git your-app-folder`
-`npm install`
-`gulp serve`
+````
+git clone https://github.com/Duskfall/webpack-angularjs.git your-app-folder
+npm install
+gulp serve
+````
