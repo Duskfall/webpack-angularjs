@@ -8102,6 +8102,33 @@ button.close {
   }
 }
 
+.article {
+  margin: 30px 0;
+}
+
+.article-img {
+  display: inline-block;
+  width: 200px;
+  vertical-align: middle;
+  img{
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+
+.article-data {
+  display: inline-block;
+  width: calc(100% - 250px);
+  vertical-align: middle;
+  margin-left: 20px;
+  position: relative;
+}
+
+.article-bottom{
+  position: relative;
+  bottom: 0;
+}
+
 @media (max-width: 768px) {
   .title {
     height: 600px;

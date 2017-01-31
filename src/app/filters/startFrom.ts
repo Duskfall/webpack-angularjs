@@ -1,4 +1,5 @@
-﻿let TableFilters = () => {
+﻿import * as _ from "lodash";
+let TableFilters = () => {
     return (input, start) => {
         if (input !== undefined && input !== null) {
 

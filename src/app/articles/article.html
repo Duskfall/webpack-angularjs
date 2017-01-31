@@ -1,0 +1,16 @@
+<div class="article">
+  <div class="article-content">
+    <div class="article-img">
+      <img ng-src="{{ $ctrl.article.urlToImage }}"/>
+    </div>
+    <div class="article-data">
+      <a href="{{$ctrl.article.url}}"><h3 class="article-h3" ng-bind="::$ctrl.article.title"></h3></a>
+      <p ng-bind="::$ctrl.article.description"></p>
+      <div class="article-date" ng-bind="::$ctrl.article.publishedAt | date:'medium'"></div>
+      <div class="article-bottom">
+        <i class="fa fa-user"></i>
+        <a href="{{$ctrl.article.url}}" target="_blank" ng-bind="::$ctrl.article.url"></a>
+      </div>
+    </div>
+  </div>
+</div>
